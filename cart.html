@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-commerce website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+</head>
+
+<body>
+    <!-- Navbar section -->
+    <section id="header">
+        <a href="#"><img src="img/logo.png" class="logo" alt=""></a>
+
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a " href=" shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li id="lg-bag"><a class="active" href="cart.html"><i class="far fa-shopping-bag"></i></a></li>
+                <!--for closing hamburger menu-->
+                <a href="#" id="close"><i class="far fa-times"></i></a>
+            </ul>
+        </div>
+        <!-- hamburger menu -->
+        <div id="mobile">
+            <a href="cart.html"><i class="far fa-shopping-bag"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+
+    <!-- Contact banner section -->
+    <section id="page-header" class="about-header">
+
+        <h2>#Let's_talk</h2>
+
+        <p>LEAVE A MESSAGE, We love to hear from you</p>
+
+    </section>
+
+    <div class="container-1">
+        <header id="head">
+            <h1>Products</h1>
+        </header>
+        <main>
+            <div class="products-1">
+                <div class="product-A">
+                    <h2><img src="img/products/f1.jpeg" alt=""></h2>
+                    <p>Price: $10.00</p>
+                    <button class="add-to-cart-btn" data-name="Product 1" data-price="10.00">Add to Cart</button>
+                </div>
+                <div class="product-A">
+                   <h2><img src="img/products/f2.jpeg" alt=""></h2>
+                    <p>Price: $20.00</p>
+                    <button class="add-to-cart-btn" data-name="Product 2" data-price="20.00">Add to Cart</button>
+                </div>
+                <div class="product-A">
+                    <h2><img src="img/products/f3.jpeg" alt=""></h2>
+                    <p>Price: $20.00</p>
+                    <button class="add-to-cart-btn" data-name="Product 2" data-price="20.00">Add to Cart</button>
+                </div>
+            </div>
+            <div class="cart">
+                <h1>Shopping Cart</h1>
+                <table id="cartTable">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Subtotal</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Cart items will be added here -->
+                    </tbody>
+                </table>
+                <div class="total">
+                    <h2>Total: <span id="totalPrice">$0.00</span></h2>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer section -->
+
+    <!-- 1. Contact section -->
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="img/logo.png" alt="">
+            <h4>Contact</h4>
+            <p><strong>Address: </strong>Salt Lake,kolkata,West Bengal</p>
+            <p><strong>Phone: </strong>+91 896172</p>
+            <p><strong>Hours: </strong>10:00 - 18:00, Mon - Sat</p>
+            <div class="follow">
+                <h4>Follow us</h4>
+                <div class="icons">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. About section -->
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About Us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Contact Us</a>
+        </div>
+
+        <!-- 3. Account Section -->
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign in</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track my order</a>
+            <a href="#">Help</a>
+        </div>
+
+        <!-- 4. Install app & Payment  -->
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App store or Google Play</p>
+            <div class="row">
+                <img src="img/pay/app.jpg" alt="">
+                <img src="img/pay/play.jpg" alt="">
+            </div>
+            <p>Secured Payment Gateways</p>
+            <img src="img/pay/pay.png" alt="">
+        </div>
+
+        <!-- 5. Copyright section -->
+        <div class="copyright">
+            <p>&copy 2024, Aman Shopping | All rights reserved</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
+            const cartTableBody = document.querySelector('#cartTable tbody');
+            const totalPriceElement = document.getElementById('totalPrice');
+        
+            function updateSubtotal(row) {
+                const quantity = row.querySelector('.quantity').value;
+                const price = parseFloat(row.querySelector('.price').textContent.replace('$', ''));
+                const subtotal = row.querySelector('.subtotal');
+                const newSubtotal = (quantity * price).toFixed(2);
+                subtotal.textContent = `$${newSubtotal}`;
+            }
+        
+            function updateTotalPrice() {
+                let total = 0;
+                document.querySelectorAll('.subtotal').forEach(function (subtotalElement) {
+                    total += parseFloat(subtotalElement.textContent.replace('$', ''));
+                });
+                totalPriceElement.textContent = `$${total.toFixed(2)}`;
+            }
+        
+            function addToCart(productName, productPrice) {
+                let cartRow = document.createElement('tr');
+                cartRow.innerHTML = `
+                    <td>${productName}</td>
+                    <td><input type="number" value="1" min="1" class="quantity"></td>
+                    <td class="price">$${parseFloat(productPrice).toFixed(2)}</td>
+                    <td class="subtotal">$${parseFloat(productPrice).toFixed(2)}</td>
+                    <td><button class="remove-btn">Remove</button></td>
+                `;
+                cartTableBody.appendChild(cartRow);
+        
+                // Add event listeners to new elements
+                cartRow.querySelector('.quantity').addEventListener('change', function () {
+                    updateSubtotal(cartRow);
+                    updateTotalPrice();
+                });
+        
+                cartRow.querySelector('.remove-btn').addEventListener('click', function () {
+                    cartRow.remove();
+                    updateTotalPrice();
+                });
+        
+                updateTotalPrice();
+            }
+        
+            addToCartButtons.forEach(function (button) {
+                button.addEventListener('click', function () {
+                    const productName = this.getAttribute('data-name');
+                    const productPrice = this.getAttribute('data-price');
+                    addToCart(productName, productPrice);
+                });
+            });
+        
+            // Initial calculation
+            updateTotalPrice();
+        });
+        
+    </script>
+</body>
+
+</html>

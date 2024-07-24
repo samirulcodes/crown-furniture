@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-commerce website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+</head>
+
+<body>
+    <!-- Navbar section -->
+    <section id="header">
+        <a href="#"><img src="img/logo.png" class="logo" alt=""></a>
+
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li id="lg-bag"><a href="cart.html"><i class="far fa-shopping-bag"></i></a></li>
+                <!--for closing hamburger menu-->
+                <a href="#" id="close"><i class="far fa-times"></i></a>
+            </ul>
+        </div>
+        <!-- hamburger menu -->
+        <div id="mobile">
+            <a href="cart.html"><i class="far fa-shopping-bag"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+
+    <!-- adding single product details -->
+
+    <section id="prodetails" class="section-p1">
+        <!-- single product img and Main Image-->
+        <div class="single-pro-image">
+            <img src="img/products/f1.jpg" width="100%" id="MainImg" alt="">
+
+            <!-- small images group-->
+            <div class="small-img-group">
+                <div class="small-img-col">
+                    <img src="img/products/f1.jpeg" width="100%" class="small-img" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img src="img/products/f2.jpeg" width="100%" class="small-img" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img src="img/products/f3.jpeg" width="100%" class="small-img" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img src="img/products/f4.jpeg" width="100%" class="small-img" alt="">
+                </div>
+            </div>
+        </div>
+
+        <!-- single product details -->
+        <div class="single-pro-details">
+            <h6>Dining Set</h6>
+            <h4>Living Room Furniture Set</h4>
+            <h2>₹2000</h2>
+            <select>
+                <option>Select Size</option>
+                <option>6/8</option>
+                <option>10/8</option>
+                <option>8/8</option>
+                <option>10/10</option>
+                <option>Customize</option>
+            </select>
+
+            <input type="number" value="1">
+            <button class="normal">Add To Cart</button>
+            <h4>Product Details</h4>
+            <span>Furniture is a household item that can be used for many purposes, such as sitting, sleeping, and storing. It can be made from a variety of materials, including wood, metal, glass, plastics, marble, and fabrics. Furniture can be simple or elaborate, movable or built-in, and highly stylized. </span>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section id="product1" class="section-p1">
+        <h2>Featured Products</h2>
+        <p>Creating the stylish of Art Living</p>
+        <div class="pro-container">
+            <div class="pro">
+                <img src="img/products/n1.jpeg" alt="">
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>Cartoon Astronaut T-Shirts</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>₹999</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+
+            <div class="pro">
+                <img src="img/products/n2.jpeg" alt="">
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>Cartoon Astronaut T-Shirts</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>₹849</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+
+            <div class="pro">
+                <img src="img/products/n3.jpeg" alt="">
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>Cartoon Astronaut T-Shirts</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>₹1299</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+
+            <div class="pro">
+                <img src="img/products/n4.jpeg" alt="">
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>Cartoon Astronaut T-Shirts</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>₹1199</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- NewsLetter and Seacrh Box -->
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Sign Up for Newsletter</h4>
+            <p>Get E-mail updates about our latest shop and <span>special offers.</span></p>
+        </div>
+
+        <div class="form">
+            <input type="text" placeholder="your email address">
+            <button class="normal">sign up</button>
+        </div>
+    </section>
+
+    <!-- Footer section -->
+
+    <!-- 1. Contact section -->
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="img/logo.png" alt="">
+            <h4>Contact</h4>
+            <p><strong>Address: </strong>Salt Lake,kolkata,West Bengal</p>
+            <p><strong>Phone: </strong>+91 896172</p>
+            <p><strong>Hours: </strong>10:00 - 18:00, Mon - Sat</p>
+            <div class="follow">
+                <h4>Follow us</h4>
+                <div class="icons">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. About section -->
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About Us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Contact Us</a>
+        </div>
+
+        <!-- 3. Account Section -->
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign in</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track my order</a>
+            <a href="#">Help</a>
+        </div>
+
+        <!-- 4. Install app & Payment  -->
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App store or Google Play</p>
+            <div class="row">
+                <img src="img/pay/app.jpg" alt="">
+                <img src="img/pay/play.jpg" alt="">
+            </div>
+            <p>Secured Payment Gateways</p>
+            <img src="img/pay/pay.png" alt="">
+        </div>
+
+        <!-- 5. Copyright section -->
+        <div class="copyright">
+            <p>&copy 2024, Aman Shopping | All rights reserved</p>
+        </div>
+    </footer>
+
+    <!-- when we click on another images it will be changed -->
+    <script>
+        var MainImg=document.getElementById("MainImg")
+        var smallimg=document.getElementsByClassName("small-img")
+
+        // first image will changed with main image 
+        smallimg[0].onclick=function(){
+            MainImg.src=smallimg[0].src
+        }
+
+        // second image will changed with main image 
+        smallimg[1].onclick=function(){
+            MainImg.src=smallimg[1].src
+        }
+
+        // third image will changed with main image 
+        smallimg[2].onclick=function(){
+            MainImg.src=smallimg[2].src
+        }
+
+        // fourth image will changed with main image 
+        smallimg[3].onclick=function(){
+            MainImg.src=smallimg[3].src
+        }
+      
+    </script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
