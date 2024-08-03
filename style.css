@@ -61,7 +61,7 @@ body {
 }
 
 .logo{
-  height: 80px;
+  height: 40px;
   
 }
 
@@ -362,7 +362,7 @@ button.normal {
 #sm-banner {
   display: flex;
   justify-content: space-between;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
 }
 
 #sm-banner h4 {
@@ -512,7 +512,7 @@ footer .col {
 }
 
 footer .logo {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 footer h4 {
